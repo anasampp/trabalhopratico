@@ -2,55 +2,41 @@ package models;
 
 import java.util.ArrayList;
 
-public class Candidato {
-    private int id;
-    private Usuario usuario;
-    private String linkGit;
-    private String linkLinkedln;
+public class Candidato extends Usuario{
+    private String cpf;
+    private String dataNascimento;
     private int telefone;
     private Endereco endereco;
+    private String linkGit;
+    private String linkLinkedln;
     private ArrayList<Vaga> listaVagasCadastradas;
 
-    public Candidato(int id, Usuario usuario, String linkGit, String linkLinkedln, int telefone, Endereco endereco) {
-        this.id = id;
-        this.usuario = usuario;
-        this.linkGit = linkGit;
-        this.linkLinkedln = linkLinkedln;
+    public Candidato(int id, String nome, String email, String senha, int tipo, String cpf, String dataNascimento,
+                     int telefone, Endereco endereco, String linkGit, String linkLinkedln) {
+        super(id, nome, email, senha, tipo);
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
         this.telefone = telefone;
         this.endereco = endereco;
+        this.linkGit = linkGit;
+        this.linkLinkedln = linkLinkedln;
         this.listaVagasCadastradas = new ArrayList<>();
     }
 
-    public int getId() {
-        return id;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public String getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getLinkGit() {
-        return linkGit;
-    }
-
-    public void setLinkGit(String linkGit) {
-        this.linkGit = linkGit;
-    }
-
-    public String getLinkLinkedln() {
-        return linkLinkedln;
-    }
-
-    public void setLinkLinkedln(String linkLinkedln) {
-        this.linkLinkedln = linkLinkedln;
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public int getTelefone() {
@@ -69,11 +55,27 @@ public class Candidato {
         this.endereco = endereco;
     }
 
+    public String getLinkGit() {
+        return linkGit;
+    }
+
+    public void setLinkGit(String linkGit) {
+        this.linkGit = linkGit;
+    }
+
+    public String getLinkLinkedln() {
+        return linkLinkedln;
+    }
+
+    public void setLinkLinkedln(String linkLinkedln) {
+        this.linkLinkedln = linkLinkedln;
+    }
+
     public ArrayList<Vaga> getListaVagasCadastradas() {
         return listaVagasCadastradas;
     }
 
-    public void setListaVagasCadastradas(Vaga vaga) {
-        this.listaVagasCadastradas.add(vaga);
+    public void setListaVagasCadastradas(ArrayList<Vaga> listaVagasCadastradas) {
+        this.listaVagasCadastradas = listaVagasCadastradas;
     }
 }

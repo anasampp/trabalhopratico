@@ -1,46 +1,17 @@
 package models;
 
-public class Empresa {
-    private int id;
-    private Usuario usuario;
-    private String nome;
+public class Empresa extends Usuario{
     private String cnpj;
-    private String razao;
+    private String razaoSocial;
     private int telefone;
     private Endereco enderecoEmpresa;
 
-    public Empresa(int id, Usuario usuario, String nome, String cnpj, String razao, int telefone, Endereco enderecoEmpresa) {
-        this.id = id;
-        this.usuario = usuario;
-        this.nome = nome;
+    public Empresa(int id, String nome, String email, String senha, int tipoUsuario, String cnpj, String razaoSocial, int telefone, Endereco enderecoEmpresa) {
+        super(id, nome, email, senha, tipoUsuario);
         this.cnpj = cnpj;
-        this.razao = razao;
+        this.razaoSocial = razaoSocial;
         this.telefone = telefone;
         this.enderecoEmpresa = enderecoEmpresa;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getCnpj() {
@@ -51,12 +22,12 @@ public class Empresa {
         this.cnpj = cnpj;
     }
 
-    public String getRazao() {
-        return razao;
+    public String getRazaoSocial() {
+        return razaoSocial;
     }
 
-    public void setRazao(String razao) {
-        this.razao = razao;
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
     }
 
     public int getTelefone() {

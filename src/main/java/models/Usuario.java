@@ -5,16 +5,14 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
-    private String cpf;
-    private int tipo;
+    private int tipoUsuario;
 
-    public Usuario(int id, String nome, String email, String senha, String cpf, int tipo) {
+    public Usuario(int id, String nome, String email, String senha, int tipoUsuario) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.cpf = cpf;
-        this.tipo = tipo;
+        this.tipoUsuario = tipoUsuario;
     }
 
     public int getId() {
@@ -49,19 +47,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public String getCpf() {
-        return cpf;
+    public int getTipoUsuario() {
+        return tipoUsuario;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    public void setTipoUsuario(int tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 }
