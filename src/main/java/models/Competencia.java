@@ -1,8 +1,14 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@Entity
 public class Competencia {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String conhecimento;
     private ArrayList<String> listaHabilidades;

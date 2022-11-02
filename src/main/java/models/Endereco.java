@@ -1,6 +1,13 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
+@Entity
 public class Endereco {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String estado;
     private String cidade;
     private String rua;

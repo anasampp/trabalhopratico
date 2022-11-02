@@ -1,7 +1,12 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.ArrayList;
 
+@Entity
 public class Candidato extends Usuario{
     private String cpf;
     private String dataNascimento;
