@@ -40,4 +40,6 @@ public class VagaRequisitos extends Vaga {
     public void setResidirCidade(boolean residirCidade) {
         this.residirCidade = residirCidade;
     }
+
+
 }

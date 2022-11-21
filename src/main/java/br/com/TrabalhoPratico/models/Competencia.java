@@ -58,4 +58,11 @@ public class Competencia {
         this.listaSoftSkills = listaSoftSkills;
     }
 
+    public List<Candidato> getCandidatos() {
+        return candidatos;
+    }
+
+    public void setCandidatos(List<Candidato> candidatos) {
+        this.candidatos = candidatos;
+    }
 }

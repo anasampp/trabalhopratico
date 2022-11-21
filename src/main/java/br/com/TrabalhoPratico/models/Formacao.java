@@ -83,5 +83,13 @@ public class Formacao {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public List<Candidato> getCandidatos() {
+        return candidatos;
+    }
+
+    public void setCandidatos(List<Candidato> candidatos) {
+        this.candidatos = candidatos;
+    }
 }
 

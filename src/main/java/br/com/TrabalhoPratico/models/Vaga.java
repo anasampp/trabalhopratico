@@ -85,4 +85,11 @@ public class Vaga {
         this.modeloTrabalho = modeloTrabalho;
     }
 
+    public List<Candidato> getListaCandidatosCadastrados() {
+        return listaCandidatosCadastrados;
+    }
+
+    public void setListaCandidatosCadastrados(List<Candidato> listaCandidatosCadastrados) {
+        this.listaCandidatosCadastrados = listaCandidatosCadastrados;
+    }
 }
